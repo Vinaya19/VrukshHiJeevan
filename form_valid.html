@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<title> volunteer form</title>
+<link rel="stylesheet" type="text/css" href="Random.css">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8"/> <!-- Cross Browser compatibility .Validator Suggestion.charset For character encoding.Character encoding is a method of converting bytes into characters. -->
+<style>
+
+
+#rightmenuele ul li a:visited, a:link, a:active{
+text-decoration:none;
+color:#333333;
+}
+
+#rightmenuele ul li a:hover{
+text-decoration:none;
+color:rgb(204,204,204);
+}
+
+.p2
+{
+color:white;
+font-style: bold italic;
+font-size:20px;
+padding: 10px 10px 10px 10px;
+}
+
+
+.p1
+{
+text-align:center;
+color:white;
+font-size:30px;
+margin-top:150px;
+}
+
+.b
+{
+padding:10px 10px 10px 10px;
+cellspacing:20px 20px 20px 20px;
+color:black;
+}
+
+.container{
+width:50%;
+height:0px;
+margin-top:50px;
+margin-left:350px;
+
+}
+
+legend{
+font-size:20px;
+font-style: italic;
+color:white;
+}
+
+.field_set{
+border-color:white;
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+
+
+<script type ="text/javascript">
+function  formValidation()
+{
+	var fuser=document.myform.fn.value;
+ 	var luser=document.myform.ln.value;
+	var con=document.myform.contact.value;
+	var email=document.myform.em.value;
+
+	if(fuser == "")
+ 	{
+ 	  document.getElementById("fname").innerHTML="**please fill username field**";
+ 	  
+ 	 return false;
+ 	}
+ 	if((fuser.length<=2)||(fuser.length>20))
+ 	{
+ 	  document.getElementById("fname").innerHTML="**please enter valid username field**";
+ 	  return false;
+ 	}
+ 	
+	if(luser == "")
+ 	{
+ 	  document.getElementById("lname").innerHTML="**please fill username field**";
+ 	  
+ 	 return false;
+ 	}
+ 	if((luser.length<=2)||(luser.length>20))
+ 	{
+ 	  document.getElementById("lname").innerHTML="**please enter valid username field**";
+ 	  return false;
+ 	}
+
+	if(con == "")
+	
+	{
+	  document.getElementById("con1").innerHTML="**please enter contact **";
+ 	  
+ 	  return false;
+ 	} 
+ 	if(isNaN(con))
+	
+	{
+	  document.getElementById("con1").innerHTML="**only digits are allowed**";
+ 	  
+ 	  return false;
+ 	} 
+ 	if(con.length !=10)
+	
+	{
+	  document.getElementById("con1").innerHTML="**please enter valid contact**";
+ 	  
+ 	  return false;
+ 	}
+ 	
+ 	
+
+}
+</script>
+
+
+<div class="bgimage">
+		<div class="menu"> 
+
+			<div class="leftmenu">
+				<h4> VrukshHiJeevan </h4>
+			</div>
+
+			<div class="rightmenu">
+				<div id=rightmenuele>
+					<ul>
+						<li> <a href="contactus.html">CONTACT US</a> </li>
+						<li> EVENTS 
+							<ul>
+								<li><a href="UE.html">Upcoming</a></li>
+								<li><a href="OE.html">Ongoing</a></li>
+								<li><a href="CE.html">Completed</a></li>
+							</ul>
+						</li>
+						<li> GET INVOLVED
+						    <ul>
+						    	<li><a href="form_valid.html">Volunteer</a></li>
+							<li><a href="form_donation.html">Donate Money</a></li>
+						    	<li><a href="ngo_form.html">NGOs</a></li>
+						</ul> 
+						</li>
+						<li> ABOUT US
+							<ul>
+								<li><a href="about_story.html">Our Story</a></li>
+								<li><a href="about_achievement.html">Achievements</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html"> HOME</a></li>
+					</ul>
+			    </div>
+			</div>
+
+		</div>
+
+		
+<div>			
+<p class="p1"><i><b>REGISTER    AS    A   VOLUNTEER</b></i></p>
+
+
+<div class="container">
+<form name="myform"   action="form_insert.php" onsubmit="return formValidation()"  method=post class="a">
+
+<fieldset class="field_set">
+<legend>Personal details</legend>
+<br>
+<p class="p2">First Name     <input type = "text"  value=""  id="fn" name="fn"/></p>
+<span id="fname"   style="color:red;font-weight:bold"></span>
+
+
+<p class="p2">Last Name     <input type = "text"  value=""  id="ln" name="ln" /></p>
+<span id="lname"  style="color:red;font-weight:bold"></span>
+
+<p class="p2">Age                       <input type= "text"  value=""  id="age"  name="age"/></p>
+<span id="age"    style="color:red;font-weight:bold"></span>
+
+<p class="p2">Contact       <input type="text"  maxlength="10"  value=""  id="contact" name="contact"/></p>
+<span id="con1"   style="color:red;font-weight:bold"></span>
+
+<p class="p2">Email         <input type="text" value=""  id="em"  name="em" /></p>
+<span id="email"   style="color:red;font-weight:bold"></span>
+
+
+<p ><input type="submit"  onclick="popup()" value="Submit" class="b"/></p><br>
+</fieldset>
+
+</form>
+</div>		
+</div>		
+
+		
+	</div>
+	
+	<script type ="text/javascript">
+function popup(){
+	alert("You successfully registered as a volunteer");
+}
+</script>
+
+
+
+<footer>
+            <div class="footright">
+	            <h3>OUR MISSION</h3>
+	            <p>Spread awareness about tree plantation events</p>
+	            <h3>OUR VISION</h3>
+	            <p>Plant as many trees as possible</p>
+	        </div>
+            <div class="footleft">
+                <h3>CONTACT US</h3>
+                <address>
+                     Mindspace Towers, High Street<br>
+                    Andheri(West), Mumbai,<br>
+                    Maharashtara, 400053 <br><br>
+	    
+                +91 9986485715<br>
+                vhj@gmail.com
+                </address>
+            </div>
+    </footer>
+
+
+
+
+
+</body>
+</html>
+

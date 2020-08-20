@@ -1,0 +1,185 @@
+<!doctype html>
+<html>
+<head>
+<title>Donation</title>
+
+<link rel="stylesheet" type="text/css" href="Random.css">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8"/> <!-- Cross Browser compatibility .Validator Suggestion.charset For character encoding.Character encoding is a method of converting bytes into characters. -->
+
+
+<style>
+
+#rightmenuele ul li a:visited, a:link, a:active{
+text-decoration:none;
+color:#333333;
+}
+
+#rightmenuele ul li a:hover{
+text-decoration:none;
+color:rgb(204,204,204);
+}
+
+.p1
+{
+text-align:center;
+color:white;
+font-size:30px;
+margin-top:150px;
+}
+
+
+.p2
+{
+color:white;
+font-style: bold italic;
+font-size:20px;
+padding: 10px 10px 10px 10px;
+}
+
+
+legend{
+font-size:20px;
+font-style: italic;
+color:white;
+}
+
+.field_set{
+border-color:white;
+}
+
+
+
+.container{
+width:50%;
+height:0px;
+margin-top:50px;
+margin-left:350px;
+}
+
+
+
+</style>
+</head>
+<body>
+
+<div class="bgimage">
+		<div class="menu"> 
+
+			<div class="leftmenu">
+				<h4> VrukshHiJeevan </h4>
+			</div>
+
+			<div class="rightmenu">
+				<div id=rightmenuele>
+					<ul>
+						<li> <a href="contactus.html">CONTACT US</a> </li>
+						<li> EVENTS 
+							<ul>
+								<li><a href="UE.html">Upcoming</a></li>
+								<li><a href="OE.html">Ongoing</a></li>
+								<li><a href="CE.html">Completed</a></li>
+							</ul>
+						</li>
+						<li> GET INVOLVED
+						    <ul>
+						    	<li><a href="form_valid.html">Volunteer</a></li>
+							<li><a href="form_donation.html">Donate Money</a></li>
+						    	<li><a href="ngo_form.html">NGOs</a></li>
+						   
+						    </ul> 
+						</li>
+						<li> ABOUT US
+							<ul>
+								<li><a href="about_story.html">Our Story</a></li>
+								<li><a href="about_achievement.html">Achievements</a></li>
+							</ul>
+						</li>
+						<li><a href="index.html"> HOME</a></li>
+					</ul>
+			    </div>
+			</div>
+
+		</div>
+
+	<div>
+	<p class="p1"><i><b>DONATE  FOR  GOOD  CAUSE </b></i></p>
+	
+	<div class="container">
+<form name="donation" id="donation" action="donation_insert.php" method=post >
+
+<fieldset class="field_set">
+<legend>Credit Card Details</legend>
+<br>
+<p class="p2">First Name   :  <input type="text" value="" name="fn"  /></p>
+
+<p class="p2">Last Name   :  <input type="text"  value=""  name="ln" /></p>
+
+<p class="p2">Email   :  <input type="text"  value=""  name="em" /></p>
+
+
+<p class="p2">Donation Amount  :<input type="text" value="" name="da"  /></p>
+
+<p><input type="submit" onclick="location.href='new_thanks.html'" id="submit"  value="Submit" class="b"/></p><br>
+
+
+<p> <id='response'>  </p>
+
+</fieldset>
+
+</form>
+</div>
+</div>
+
+	
+
+		
+	</div>
+
+
+<script type="text/javascript">
+
+	$(document).ready(function(){
+	var form = $('#donation ');
+	$('#submit').click(function(){
+	$.ajax({
+		url:from.attr("action"),
+		type:'post',
+		data:$("#donation input").serialize()
+
+		success:function(data){
+		console.log(data)
+		}
+	          });
+	});
+
+	
+
+</script>
+
+<footer>
+            <div class="footright">
+	            <h3>OUR MISSION</h3>
+	            <p>Spread awareness about tree plantation events</p>
+	            <h3>OUR VISION</h3>
+	            <p>Plant as many trees as possible</p>
+	        </div>
+            <div class="footleft">
+                <h3>CONTACT US</h3>
+                <address>
+                     Mindspace Towers, High Street<br>
+                    Andheri(West), Mumbai,<br>
+                    Maharashtara, 400053 <br><br>
+	    
+                +91 9986485715<br>
+                vhj@gmail.com
+                </address>
+            </div>
+    </footer>
+	
+
+</body>
+</html>
+
+
